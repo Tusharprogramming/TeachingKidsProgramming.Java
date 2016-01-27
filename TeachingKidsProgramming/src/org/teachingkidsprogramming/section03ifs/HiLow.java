@@ -39,7 +39,7 @@ public class HiLow
       }
       //    Repeat --#9.2
       //    After 8 incorrect guesses tell the user they've lost --#11
-      if (i == 8)
+      if (i == 7)
       {
         MessageBox.showMessage("You Lose X-(");
       }
