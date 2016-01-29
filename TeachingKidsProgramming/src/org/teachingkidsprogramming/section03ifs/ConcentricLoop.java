@@ -23,13 +23,17 @@ public class ConcentricLoop
       //      If i is divisible by 20 --(HINT: Use mod operator '%') --#7
       if (i % 20 == 0)
       {
-        //          Do the following 360 times --#8.1
-        //              Move the tortoise 1 pixel  --#5 
-        Tortoise.move(1);
-        //              Turn the tortoise 1 degree --#6
-        Tortoise.turn(1);
-        //              Change the width of the line that the tortoise draws to 1/100th of the current line --#9      
-        //          Repeat --#8.2
+        for (int j = 0; j < 360; j++)
+        {
+          //          Do the following 360 times --#8.1
+          //              Move the tortoise 1 pixel  --#5 
+          Tortoise.move(1);
+          //              Turn the tortoise 1 degree --#6
+          Tortoise.turn(1);
+          //              Change the width of the line that the tortoise draws to 1/100th of the current line --#9 
+          Tortoise.setPenWidth(i / 100);
+          //          Repeat --#8.2
+        }
       }
       //   Repeat --#3.2
     }
