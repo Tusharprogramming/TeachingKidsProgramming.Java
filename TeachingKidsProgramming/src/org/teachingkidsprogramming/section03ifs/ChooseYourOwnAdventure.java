@@ -21,17 +21,37 @@ public class ChooseYourOwnAdventure
     if ("wake up".equalsIgnoreCase(action))
     {
       //          wakeUp (recipe below) --#2.1
-      //          ------------- Recipe for wakeUp --#2.2
-      //              Tell the user "You wake up and have a boring day. The end." --#1
-      //          ------------- End of wakeUp recipe --#2.3
+      wakeUp();
     }
     else if ("explore".equalsIgnoreCase(action))
     {
       //      approachOoze (recipe below) --#4.1
-      //      ------------- Recipe for approachOoze --#4.2
-      //         Tell the user "You approach a glowing, green bucket of ooze. Worried that you will get in trouble, you pick up the bucket." --#3
-      //         Ask the user "Do you want to pour the ooze into the 'backyard' or 'toilet'?" --#7
-      //         If they answer "toilet" --#8.1
+      approachOoze();
+    }
+    else
+    {
+      //      endStory (recipe below) --#6.1
+      endStory();
+    }
+  }
+  private static void endStory()
+  {
+    //      ------------- Recipe for endStory --#6.2
+    //         Tell the user "You don't know how to read directions. You can't play this game. The end." --#5
+    MessageBox.showMessage("You don't know how to read directions. You can't play this game. The end.");
+    //      ------------- End of endStory recipe --#6.3
+  }
+  private static void approachOoze()
+  {
+    //      ------------- Recipe for approachOoze --#4.2
+    //         Tell the user "You approach a glowing, green bucket of ooze. Worried that you will get in trouble, you pick up the bucket." --#3
+    MessageBox.showMessage(
+        "You approach a glowing, green bucket of ooze. Worried that you will get in trouble, you pick up the bucket.");
+    //         Ask the user "Do you want to pour the ooze into the 'backyard' or 'toilet'?" --#7
+    askAQuestion("Do you want to pour the ooze into the 'backyard' or 'toilet'?");
+    //         If they answer "toilet" --#8.1
+    if (askAQuestion("Do you want to pour the ooze into the 'backyard' or 'toilet'?") == "toilet")
+    {
       //            pourIntoToilet (recipe below) --#12.1
       //            ------------- Recipe for pourIntoToilet --#12.2
       //               Tell the user "As you pour the ooze into the toilet it backs up, gurgles, and explodes, covering you in radioactive waste." --#10
@@ -43,6 +63,9 @@ public class ChooseYourOwnAdventure
       //               Otherwise, if they answer anything else --#13.3
       //                    endStory --#16
       //            ------------- End of pourIntoToilet recipe --#12.3
+    }
+    else if (askAQuestion("Do you want to pour the ooze into the 'backyard' or 'toilet'?") == "backyard")
+    {
       //         Otherwise, if they answer "backyard" --#8.2
       //            pourIntoBackyard (recipe below) --#19.1
       //            ------------- Recipe for pourIntoBackyard --#19.2
@@ -54,18 +77,22 @@ public class ChooseYourOwnAdventure
       //                    startStory --#22
       //                Otherwise, if they answer anything else --#20.3
       //                    endStory --#23
-      //         ------------- End of pourIntoBackyard recipe --#19.3
+      //         ------------- End of pourIntoBackyard recipe --#19.3 
       //         Otherwise, if they answer anything else --#8.3
       //            endStory --#9
-      //      ------------- End of approachOoze recipe --#4.3
     }
     else
     {
-      //      endStory (recipe below) --#6.1
-      //      ------------- Recipe for endStory --#6.2
-      //         Tell the user "You don't know how to read directions. You can't play this game. The end." --#5
-      //      ------------- End of endStory recipe --#6.3
+      endStory();
     }
+    //      ------------- End of approachOoze recipe --#4.3
+  }
+  private static void wakeUp()
+  {
+    //          ------------- Recipe for wakeUp --#2.2
+    //              Tell the user "You wake up and have a boring day. The end." --#1
+    MessageBox.showMessage("You wake up and have a boring day. The end!");
+    //          ------------- End of wakeUp recipe --#2.3
   }
   private static void animateStartStory()
   {
