@@ -30,21 +30,21 @@ public class DigiFlower
     }
     //        Repeat --#14.2
     //    Do the following 8 times --#6.1
-    for (int i = 0; i < 8; i++)
-    {
-      drawOctagon();
-    }
+    drawOctagon();
   }
   private static void drawOctagon()
   {
     //  ------------- Recipe for drawOctogon --#10.2
-    //   Change the pen color of the line the tortoise draws to the next color on the color wheel --#4
-    Tortoise.setPenColor(ColorWheel.getNextColor());
-    //      Move the tortoise 50 pixels --#2
-    Tortoise.move(50);
-    //      Turn the tortoise 1/8th of 360 degrees to the right --#5
-    Tortoise.turn(360 / 8);
-    //    Repeat --#6.2  
+    for (int i = 0; i < 8; i++)
+    {
+      //   Change the pen color of the line the tortoise draws to the next color on the color wheel --#4
+      Tortoise.setPenColor(ColorWheel.getNextColor());
+      //      Move the tortoise 50 pixels --#2
+      Tortoise.move(50);
+      //      Turn the tortoise 1/8th of 360 degrees to the right --#5
+      Tortoise.turn(360 / 8);
+      //    Repeat --#6.2  
+    }
     //    ------------- End of drawOctogon recipe --#10.3
   }
   private static void createColorPalette()
