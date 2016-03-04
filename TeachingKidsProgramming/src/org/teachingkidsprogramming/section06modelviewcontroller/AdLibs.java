@@ -20,6 +20,10 @@ public class AdLibs
     String noun = MessageBox.askForTextInput("Enter a Noun");
     String presverb = MessageBox.askForTextInput("Enter Verb in Perfect Tense");
     String adverb = MessageBox.askForTextInput("Enter an Adverb (Capitalize this)");
+    String currentinterjection2 = MessageBox.askForTextInput("Enter an Interjection");
+    String currentingVerb = MessageBox.askForTextInput("Enter a Verb in Imperfect Tense");
+    String currentNoun = MessageBox.askForTextInput("Enter a Noun");
+    String currentEdVerb2 = MessageBox.askForTextInput("Enter a Verb in Perfect Tense");
     //  Set the value of the currentStory to the word "Today " --#1.2
     String currentStory = "Today ";
     //  Add the words "I woke " + currentAdverb + ". " to the currentStory --#3
@@ -34,6 +38,8 @@ public class AdLibs
     currentStory = currentStory + " I " + anotherperfveb + ".";
     currentStory = currentStory + " " + adverb + ", the " + noun + " " + presverb;
     //  Show the currentStory in a messa as a message --#1.1
+    currentStory = currentStory + " '" + currentinterjection2 + "!' I " + currentingVerb + " a " + currentNoun
+        + " and I " + currentEdVerb2 + " the " + currentNoun + ".";
     MessageBox.showMessage(currentStory);
   }
 }
