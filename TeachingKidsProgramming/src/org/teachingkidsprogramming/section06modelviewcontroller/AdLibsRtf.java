@@ -11,7 +11,6 @@ public class AdLibsRtf
     public String adverb;
     public String edVerb;
     public String bodyPart;
-    public String preposition;
   }
   public static void main(String[] args)
   {
@@ -23,8 +22,6 @@ public class AdLibsRtf
     word.edVerb = MessageBox.askForTextInput("What is the -ed verb?");
     //  Ask the user to enter a body part, save it as currentBodyPart --#4
     word.bodyPart = MessageBox.askForTextInput("What is the body part?");
-    //Continue adding random things of your choice --#5-9000000000000000000000000000000
-    word.preposition = MessageBox.askForTextInput("What is the preposition?");
     //  Connect the words in the currentStory to an RTF file parser (use the Parser object)  --#1.2
     String currentStory = Parser.parseRtfFile("view.rtf", word);
     //  Display the currentStory in an RTF file (use the Viewer object) --#1.3
