@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import org.teachingextensions.WindowUtils.MultiTurtleWindow;
 import org.teachingextensions.logo.Turtle;
+import org.teachingextensions.logo.utils.ColorUtils.PenColors;
+import org.teachingextensions.logo.utils.LineAndShapeUtils.Text;
 
 public class CloneTurtles
 {
@@ -31,7 +33,8 @@ public class CloneTurtles
     // Create a variable to count the number of turtles in the container --#3.1
     int NumOfTortoses = turtles.size();
     // Uncomment to Show the number of turtles in the container on the window --#3.2
-    // new Text("There are " + numberOfTurtles + " turtles in the turtle container").setTopLeft(50, 50).setPenColor(PenColors.Yellows.Gold).addTo(mtw);
+    new Text("There are " + NumOfTortoses + " turtles in the turtle container").setTopLeft(50, 50)
+        .setPenColor(PenColors.Yellows.Gold).addTo(mtw);
     //
     // Use a FOREACH loop to add your turtles to your window --#5.1
     for (Turtle turtle : turtles)
