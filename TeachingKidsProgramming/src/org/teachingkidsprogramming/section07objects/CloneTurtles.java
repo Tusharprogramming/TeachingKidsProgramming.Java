@@ -47,14 +47,21 @@ public class CloneTurtles
       //      Get your turtle's current position and then set the X position to i*100 + 350 --#6.3
       turtles.get(i).setX(i * 100 + 350);
       //      Get your turtle's current position and then set the Y position to i*100 + 100 --#6.4
+      turtles.get(i).setY(i * 100 + 100);
       // Repeat --#6.2 
     }
     //
     // Use a FOREACH loop to set values for all of your turtles --#7.1
-    //      Set the pen width to 10 pixels -- #7.3
-    //      Set the turtle speed to 9 --#7.4
-    //      Have each turtle draw a star with a side that is 100 pixels --#7.5
-    // Repeat --#7.2
+    for (Turtle turtle : turtles)
+    {
+      //      Set the pen width to 10 pixels -- #7.3
+      turtle.setPenWidth(10);
+      //      Set the turtle speed to 9 --#7.4
+      turtle.setSpeed(9);
+      //      Have each turtle draw a star with a side that is 100 pixels --#7.5
+      turtle.drawStar(100);
+      // Repeat --#7.2
+    }
   }
   //
   public static void main(String[] args)
