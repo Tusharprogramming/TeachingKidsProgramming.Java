@@ -6,21 +6,30 @@ public class AdLibs
 {
   public static void main(String[] args)
   {
-    //  Ask the user to enter an adverb, save it as currentAdverb --#2
     String currentAdverb = MessageBox.askForTextInput("Enter an Adverb");
-    //  Ask the user to enter a verb ending in '-ed', save it as currentEdVerb --#4
-    String currentEdVerb = MessageBox.askForTextInput("Enter a Verb in Present Tense");
-    //  Ask the user to enter a body part, save it as currentBodyPart --#6
+    String currentEdVerb = MessageBox.askForTextInput("Enter a Verb in Past Perfect Tense");
     String currentBodyPart = MessageBox.askForTextInput("Enter a Body Part");
-    //  Set the value of the currentStory to the word "Today " --#1.2
+    String currentinterjection = MessageBox.askForTextInput("Enter an Interjection");
+    String anotherperfveb = MessageBox.askForTextInput("Enter Verb in Past Perfect Tense");
+    String noun = MessageBox.askForTextInput("Enter a Noun");
+    String presverb = MessageBox.askForTextInput("Enter Verb in Past Perfect Tense");
+    String adverb = MessageBox.askForTextInput("Enter an Adverb (Capitalize this)");
+    String currentinterjection2 = MessageBox.askForTextInput("Enter an Interjection");
+    String currentingVerb = MessageBox.askForTextInput("Enter a Verb in Past Imperfect Tense");
+    String currentNoun = MessageBox.askForTextInput("Enter a Noun");
+    String currentEdVerb2 = MessageBox.askForTextInput("Enter a Verb in Past Perfect Tense");
     String currentStory = "Today ";
-    //  Add the words "I woke " + currentAdverb + ". " to the currentStory --#3
     currentStory = currentStory + "I woke " + currentAdverb + ". ";
-    //  Add the words '"Then I " + currentEdVerb + " " to the currentStory --#5
     currentStory = currentStory + "Then I " + currentEdVerb + " ";
-    //  Add the words "my " + currentBodyPart + ". " to the current story --#7
     currentStory = currentStory + "my " + currentBodyPart + ".";
-    //  Show the currentStory in a messa as a message --#1.1
+    currentStory = currentStory + " " + "'" + currentinterjection + "!" + "'";
+    //
+    currentStory = currentStory + " I " + anotherperfveb + ".";
+    currentStory = currentStory + " " + adverb + ", the " + noun + " " + presverb;
+    currentStory = currentStory + " '" + currentinterjection2 + "!' I " + currentingVerb + " a " + currentNoun
+        + " and I " + currentEdVerb2 + " the " + currentNoun + ".";
+    currentStory = currentStory + " The " + currentNoun + " " + currentEdVerb + " and the " + noun + " "
+        + currentEdVerb2 + ".";
     MessageBox.showMessage(currentStory);
   }
 }
