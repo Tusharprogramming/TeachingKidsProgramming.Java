@@ -1,6 +1,7 @@
 package org.teachingkidsprogramming.section07objects;
 
 import org.teachingextensions.WindowUtils.MultiTurtleWindow;
+import org.teachingextensions.logo.Sound;
 import org.teachingextensions.logo.Turtle;
 
 public class SuperTurtles
@@ -27,6 +28,8 @@ public class SuperTurtles
     mtw.addAndShowTurtle(carzytortose);
     //        Have your crazyTurtle draw a 55 pixel long lightning bolt
     carzytortose.drawLightning(55);
+    carzytortose.setSound(new Sound(Sound.TKPSound.Gong));
+    carzytortose.speak();
     //  ------------- End of makeCrazyTurtle --#5.2
   }
   private void makeSlowTortose()
@@ -38,6 +41,8 @@ public class SuperTurtles
     mtw.addAndShowTurtle(slowtortose);
     //        Have your slowTurtle draw a upside down triangle with 50 pixel sides
     slowtortose.drawTriangle(-50);
+    slowtortose.setSound(new Sound(Sound.TKPSound.Crickets));
+    slowtortose.speak();
     //  ------------- End of makeSlowTurtle --#3.1
     //  makeCrazyTurtle (recipe below) --#6.0
   }
@@ -52,6 +57,8 @@ public class SuperTurtles
     speedytortose.setSpeed(10);
     //        Have your speedyTurtle draw a triangle with 100 pixel sides
     speedytortose.drawTriangle(100);
+    speedytortose.setSound(new Sound(Sound.TKPSound.Yay));
+    speedytortose.speak();
     //  ------------- End of makeSpeedyTurtle --#1.1 
   }
 }
