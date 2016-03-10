@@ -16,13 +16,17 @@ public class SuperTurtles
   }
   private void showSomeTurtles()
   {
-    //  makeSpeedyTurtle (recipe below) --#2.0
     makeSpeedyTortose();
-    //  makeSlowTurtle (recipe below) --#4.0
     makeSlowTortose();
-    //        Create a new crazyTurtle instance  
+    makeCarzyTortose();
+  }
+  private void makeCarzyTortose()
+  {
+    Turtle carzytortose = new Turtle();
     //        Add your crazyTurtle to your MultiTurtleWindow
+    mtw.addAndShowTurtle(carzytortose);
     //        Have your crazyTurtle draw a 55 pixel long lightning bolt
+    carzytortose.drawLightning(55);
     //  ------------- End of makeCrazyTurtle --#5.2
   }
   private void makeSlowTortose()
@@ -36,7 +40,6 @@ public class SuperTurtles
     slowtortose.drawTriangle(-50);
     //  ------------- End of makeSlowTurtle --#3.1
     //  makeCrazyTurtle (recipe below) --#6.0
-    //  ------------- Recipe for makeCrazyTurtle --#5.1
   }
   private void makeSpeedyTortose()
   {
