@@ -1,0 +1,8 @@
+create mtw
+create turtle
+add turtle to mtw
+set turtle speed
+set turtle x
+draw columns
+Set turtle X, again
+turn and draw rows
