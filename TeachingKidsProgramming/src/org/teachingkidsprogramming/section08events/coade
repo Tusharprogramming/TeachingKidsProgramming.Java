@@ -1,0 +1,45 @@
+if (x >= 170 && x <= 265)
+    {
+      if (y >= 43 && y <= 134)
+      {
+        lololol = 1;
+      }
+    }
+    if (x >= 170 && x <= 265)
+    {
+      if (y >= 243 && y <= 334)
+      {
+        lololol = 9;
+      }
+    }
+    switch (lololol)
+    {
+      case 1 :
+        xTopLeft(x, y);
+        break;
+      case 2 :
+        xCenterLeft(x, y);
+        break;
+      case 3 :
+        xCenter(x, y);
+        break;
+      case 4 :
+        xTopCenter(x, y);
+        break;
+      case 5 :
+        xTopRight(x, y);
+        break;
+      case 6 :
+        xCenterRight(x, y);
+        break;
+      case 7 :
+        xBottomRight(x, y);
+        break;
+      case 8 :
+        xBottomCenter(x, y);
+        break;
+      case 9 :
+        xBottomLeft(x, y);
+        break;
+    }
+    oTopLeft(x, y);
