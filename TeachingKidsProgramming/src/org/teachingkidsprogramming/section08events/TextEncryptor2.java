@@ -30,17 +30,17 @@ public class TextEncryptor2
   }
   private static void shiftDefinitions(String[] shifts)
   {
-    shifts[0] = "M";
-    shifts[1] = "Q";
-    shifts[2] = "W";
-    shifts[3] = "E";
-    shifts[4] = "R";
-    shifts[5] = "T";
-    shifts[6] = "Y";
-    shifts[7] = "U";
-    shifts[8] = "I";
-    shifts[9] = "O";
-    shifts[10] = "P";
+    shifts[0] = "Q";
+    MessageBox.showMessage(shifts[1]);
+    shifts[1] = "W";
+    shifts[2] = "E";
+    shifts[3] = "R";
+    shifts[4] = "T";
+    shifts[5] = "Y";
+    shifts[6] = "U";
+    shifts[7] = "I";
+    shifts[8] = "O";
+    shifts[9] = "P";
     shifts[11] = "A";
     shifts[12] = "S";
     shifts[13] = "D";
@@ -56,10 +56,10 @@ public class TextEncryptor2
     shifts[23] = "V";
     shifts[24] = "B";
     shifts[25] = "N";
+    shifts[26] = "M";
   }
   private static void arrayDefinition(String[] letters)
   {
-    letters[0] = "Z";
     letters[1] = "A";
     letters[2] = "B";
     letters[3] = "C";
@@ -85,5 +85,6 @@ public class TextEncryptor2
     letters[23] = "W";
     letters[24] = "X";
     letters[25] = "Y";
+    letters[26] = "Z";
   }
 }
